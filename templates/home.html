@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static%}
+    {% block body%}
+<!-- Hero -->
+<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5df766095531ad71f65366bc/1582194579968-800VLHMAJ7WPL6WDQA3F/bluegreenwebsite.png?format=1500w');
+    height: 600px;
+  ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.1);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">Learning New Language</h1>
+                <h4 class="mb-3">English</h4>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <a class="btn btn-outline-light btn-lg" href="{% url 'all_lessons:lesson_list'%}" role="button">Start Learning</a>
+      </div>
+    </div>
+</div>
+<!-- Hero -->
+    {% endblock body%}

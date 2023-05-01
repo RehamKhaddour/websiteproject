@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<main class="container my-4">
+  <h1 class="text-center mb-4">All Available Flashcards:</h1>
+  <div class= "row mb-4">
+    <div class="col-md-12 text-center">
+        <a href="{% url 'all_flashcards:add_flashcard' %}" class="btn btn-primary fw-bold fs-5">Add new flashcard</a>
+    </div>
+  </div>
+  <div class="row">
+    {% for flashcard in flashcards %}
+    <div class="col-md-4">
+      <div class="card text-dark bg-warning mb-3 fw-bold fs-6" style="width: 18rem;">
+        <img class="card-img-top" src="../media/{{flashcard.image}}">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Word: {{flashcard}}</li>
+          <li class="list-group-item">Translation: {{flashcard.translation}}</li>
+        </ul>
+        <div class="card-body">
+          {{flashcard.id}}
+        </div>
+      </div>
+    </div>
+    {% if forloop.counter|divisibleby:3 %}
+      </div><div class="row">
+    {% endif %}
+    {% endfor %}
+  </div>
+</main>
+
+{% endblock%}

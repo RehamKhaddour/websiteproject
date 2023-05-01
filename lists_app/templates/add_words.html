@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load bootstrap5 %}
+{% block body %}
+<div class="container-sm px-5 py-5" id="term-form">
+    <form method="post">
+        <!--<div class="row px-5 py-2">
+            <h3>Ваше слово</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-4">
+                <label for="new_term">слово</label>
+                <input type="text" class="form-control input-lg" name="new_term" id="new_term">
+            </div>
+            <div class="col-md-8">
+                <label for="new_definition">перевод</label>
+                <textarea type="text" class="form-control input-lg" name="new_definition" id="new_definition" aria-describedby="definition_note" rows="3"></textarea>
+                <div id="definition_note" class="form-text">Постарайтесь уложиться в одно, максимум два предложения</div>
+            </div>
+        </div>-->
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary">submit</button>
+        {% endbuttons %}
+    </form>
+</div>
+{% endblock %}

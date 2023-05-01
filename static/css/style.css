@@ -1,0 +1,33 @@
+.banner {
+    padding: 90px 0;
+    z-index: 5;
+  }
+  .banner .block h1, .banner .block .h1 {
+    font-size: 52px;
+  }
+  @media (max-width: 991px) {
+    .banner .block h1, .banner .block .h1 {
+      font-size: 46px;
+    }
+  }
+  @media (max-width: 767px) {
+    .banner .block h1, .banner .block .h1 {
+      font-size: 38px;
+    }
+  }
+  .banner .has-shapes {
+    z-index: -1;
+  }
+  .banner .has-shapes .shape {
+    top: 0;
+    height: 100%;
+  }
+  .banner .has-shapes .shape-left {
+    left: 0;
+    top: auto;
+    bottom: -30px;
+  }
+  .banner .has-shapes .shape-right {
+    right: 0;
+  }
+  
